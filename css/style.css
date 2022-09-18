@@ -45,6 +45,7 @@ html, body {
 .info-menu {
     background-color: var(--color-theme);
     color: var(--color-white);
+    padding: 0.4rem 0;
 }
 
     .info-menu .container {
@@ -52,45 +53,48 @@ html, body {
         justify-content: space-between;
         align-items: center;
     }
+   
+    .info-menu .site-settings {
+        display: flex;
+        }
+            .info-menu .site-settings .dropdown-theme {
+                background-color: var(--color-theme);
+                color: var(--color-white);
+            }
+                .info-menu .site-settings .dropdown-theme button {
+                    background-color: var(--color-theme);
+                    color: var(--color-white);
+                    border: none;
+                }
+    
+                    .info-menu .site-settings .dropdown-theme button:hover {
+                        color: var(--color-theme-navy);
+                    }
+    
+                .info-menu .site-settings .dropdown-theme .dropdown-item {
+                    background-color: var(--color-theme);
+                    width: 130px;
+                    margin: 0;
+                }
 
-    /*.info-menu .menu-links {
-        padding: 0.5rem 0;
-    } */
-
-    .info-menu a {
+    .info-menu .menu-links a {
         color: var(--color-white);
         text-decoration: none;
         margin: 1rem;
     }
-        .info-menu a:hover {
+        .info-menu .menu-links a:hover {
             color: var(--color-theme-navy);
         }
 
-    .info-menu .sns-icons {
+    .info-menu .menu-links .sns-icons {
     margin-left: 1rem;
     }
-        .info-menu .sns-icons a {
+        .info-menu .menu-links .sns-icons a {
             margin: 0 0.2rem;
         }
-            .info-menu .sns-icons a:last-child {
+            .info-menu .menu-links .sns-icons a:last-child {
                 margin: 0 0 0 0.2rem;
             }
 
-    .info-menu .dropdown-theme {
-        background-color: var(--color-theme);
-        color: var(--color-white);
-        border: none;
-    }
 
-        .info-menu .dropdown-theme button {
-            background-color: var(--color-theme);
-            color: var(--color-white);
-            border: none;
-        }
-            .info-menu .dropdown-theme button:hover {
-                color: var(--color-theme-navy);
-            }
-        
-    .info-menu .dropdown-item:hover {
-        background-color: var(--color-theme);
-    }
+    
