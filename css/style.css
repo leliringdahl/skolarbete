@@ -120,7 +120,7 @@ html, body {
     color: var(--color-theme-navy);
  }
     .main-menu > .container {
-        display: flex;
+        display: block;
         justify-content: space-between;
         align-items: center;
         padding-top: 32px;
@@ -128,13 +128,17 @@ html, body {
     }
     .main-menu .brand {
         flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .main-menu .search-box {
-        flex: 3;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
     }
     .main-menu .shop-links {
-        flex: 2;
-        display:flex;
+        display: none;
         justify-content: end;
         align-items: center;
     }
@@ -289,14 +293,29 @@ html, body {
     .info-menu .menu-links {
         display: block;
     }
+    
 }
 
 @media (min-width: 992px) {
     .info-menu .container {
         justify-content: space-between;
     }
-
     .info-menu .menu-links .links {
         display: inline;
+    }
+    .main-menu > .container {
+        display: flex;
+    }
+    .main-menu .brand {
+        display: block;
+    }
+    .main-menu .search-box {
+        flex: 3;
+        padding: none;
+    }
+    .main-menu .shop-links {
+        display: inline;
+        flex: 3;
+
     }
 }
