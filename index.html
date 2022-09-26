@@ -57,11 +57,11 @@
 
         <div class="main-menu">
             <div class="container">
-                <div class="brand">
+                <div class="brand border">
                     <a href="index.html"><img src="images/Logo.svg" alt="Kenkata online shop"></a>
                 </div>
-                <div class="search-box">future search box</div>
-                <div class="shop-links">
+                <div class="search-box border">future search box</div>
+                <div class="shop-links border">
                     <a href="#"><i class="fa-regular fa-user me-2"></i> My account</a>
                     <a href="#"><i class="fa-regular fa-heart"></i></a>
                     <a href="#"><i class="fa-regular fa-shuffle"></i></a>
@@ -71,8 +71,23 @@
             </div>
             <nav>
                 <div class="container">
-                    <div>kategori meny</div>
-                    <div>special offer</div>
+                    <div class="browse-categories">
+                        <div class="dropdown dropdown-categories">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-bars me-2"></i>
+                                <span id="category-dropdown">Browse Categories</span>
+                                <i class="fa-regular fa-chevron-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-categories">
+                              <li><a class="dropdown-item" href="#">Womens clothing</a></li>
+                              <li><a class="dropdown-item" href="#">Mens clothing</a></li>
+                              <li><a class="dropdown-item" href="#">Childrens clothing</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div class="special-offers">
+                        
+                    </div>
                 </div>
             </nav>
         </div>

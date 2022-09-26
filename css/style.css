@@ -75,9 +75,13 @@ html, body {
     
                 .info-menu .site-settings .dropdown-theme .dropdown-item {
                     background-color: var(--color-theme);
+                    color: var(--color-white);
                     width: 130px;
                     margin: 0;
                 }
+                    .info-menu .site-settings .dropdown-theme :hover {
+                        color: var(--color-theme-navy);
+                    }
 
     .info-menu .menu-links {
         display: none;
@@ -122,15 +126,15 @@ html, body {
     }
 
     .main-menu .brand {
-        flex: 2;
+        flex: 1;
     }
 
     .main-menu .search-box {
-        flex: 5;
+        flex: 3;
     }
 
     .main-menu .shop-links {
-        flex: 4;
+        flex: 2;
         display:flex;
         justify-content: end;
         align-items: center;
@@ -157,6 +161,57 @@ html, body {
 
     .main-menu nav {
         border-top: 1px solid var(--color-gray-2);
+    }
+    .main-menu > nav > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-menu nav .browse-categories {
+        flex: 1;
+        background-color: var(--color-theme);
+    
+    }
+
+        .main-menu nav .browse-categories .dropdown-categories {
+            background-color: var(color);
+        }
+        
+            .main-menu nav .browse-categories .dropdown-categories button {
+                background-color: var(--color-theme);
+                color: var(--color-white);
+                border: none;
+                padding: 10px 15px;
+            }
+
+                .main-menu .browse-categories .dropdown-categories button:hover {
+                    color: var(--color-theme-navy);
+                }
+
+                    .main-menu nav .browse-categories .dropdown-categories span {
+                        padding-right: 45px;
+                    }
+
+            .main-menu .browse-categories .dropdown-categories .dropdown-menu {
+                background-color: var(--color-theme);
+                margin: 0;
+            }
+
+                .main-menu .browse-categories .dropdown-categories .dropdown-item {
+                    color: var(--color-white);
+                }
+
+                    .main-menu .browse-categories .dropdown-categories :hover {
+                        color: var(--color-theme-navy);
+                        background-color: var(--color-theme);
+                    }
+
+    .main-menu nav .special-offers {
+        flex: 4;
+        display: flex;
+        justify-content: end;
+        align-items: center;
     }
     
 
