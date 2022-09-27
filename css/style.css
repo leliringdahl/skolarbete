@@ -73,6 +73,9 @@ html, body {
                     color: var(--color-white);
                     background-color: var(--color-theme-navy);
                 }
+.btn-turquoise {
+    background-color: var(--color-theme-light);
+}
 
 
 /*menu*/
@@ -150,7 +153,7 @@ html, body {
     color: var(--color-theme-navy);
  }
     .main-menu > .container {
-        display: block;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 32px;
@@ -234,8 +237,13 @@ html, body {
         align-items: center;
     }
     .main-slideshow .shopping-title {
+        display:none;
         flex: 3;
     }
+        .main-slideshow .shopping-title .box {
+            width: 400px;
+
+        }
         .main-slideshow .shopping-title #title-top {
             font-family: var(--font-play);
             font-size: 60px;
@@ -246,10 +254,7 @@ html, body {
             font-size: 60px;
             font-weight: var(--font-weight-bold);
         }
-        .main-slideshow .shopping-title .box {
-            width: 400px;
 
-        }
         .main-slideshow .shopping-title button {
             display: flex;
             justify-content: center;
@@ -267,9 +272,26 @@ html, body {
         .main-slideshow .slideshow {
             flex: 3;
         }
-            .main-slideshow #main-carousel {
-                width: 400px;
-            }
+
+/*cards*/
+.card-links {
+    background-color: var(--color-white);
+    color: var(--color-theme-navy);
+}
+    .card-links .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 75px 0px;
+    }
+        .card-links .free-shipping {           
+        }
+        .card-links .support {           
+        }
+        .card-links .online-payment {       
+        }
+        .card-links .fast-delivery {      
+        }
 
 
 
@@ -299,9 +321,18 @@ html, body {
 
 
 
+@media (min-width: 580px) {
+    .main-menu .shop-links {
+        display: flex;
+        flex: 3;
+    }
 
+}
 
-@media (min-width: 578px) {
+@media (min-width: 780px) {
+    .main-slideshow .shopping-title {
+        display: inline;
+    }
 }
 
 @media (min-width: 992px) {
@@ -317,12 +348,7 @@ html, body {
     .info-menu .categories-menu button {
         display: none;
     }
-    .main-menu > .container {
-        display: flex;
-    }
-    .main-menu .brand {
-        display: block;
-    }
+
     .main-menu .search-box {
         display: flex;
         flex: 3;
