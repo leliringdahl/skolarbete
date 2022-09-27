@@ -75,6 +75,8 @@ html, body {
                 }
 .btn-turquoise {
     background-color: var(--color-theme-light);
+    color: var(--color-theme-navy);
+    padding: 20px;
 }
 
 
@@ -284,13 +286,13 @@ html, body {
         align-items: center;
         padding: 75px 0px;
     }
-        .card-links .free-shipping {           
+        .card-links .free-shipping {         
         }
-        .card-links .support {           
+        .card-links .support {       
         }
-        .card-links .online-payment {       
+        .card-links .online-payment {    
         }
-        .card-links .fast-delivery {      
+        .card-links .fast-delivery {   
         }
 
 
