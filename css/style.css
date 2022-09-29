@@ -89,6 +89,23 @@ html, body {
         border: none;
     }
 
+.section-title {
+    color: var(--color-theme-navy);
+    text-align: center;
+    padding: 40px;
+}   
+    .section-title h2 {
+        font-weight: var(--font-weight-bold);
+        font-size: 36px;
+        font-family: var(--font-play);
+    }
+        .section-title h2 span {
+            color: var(--color-theme);
+        }
+    .section-title p {
+        margin: 13px 0px;
+    }
+
 
 /*menu*/
 .info-menu {
@@ -311,10 +328,19 @@ html, body {
                     color: var(--color-white);
                 }
 
+/* shop-by-category*/
+.shop-by-category {
 
+}
+    .shop-by-category .category-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 215px);
+        grid-template-rows: repeat(3, 215px);
+    }
 
+    .shop-by-category .category-grid .categ-box {
 
-
+    }
 
 
 
