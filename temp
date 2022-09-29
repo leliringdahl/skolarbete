@@ -1,0 +1,10 @@
+.btn-turquoise {
+    background-color: var(--color-theme-light);
+    color: var(--color-theme-navy);
+    padding: 20px;
+    border:none;
+}
+    .btn-turquoise:hover {
+        background-color: var(--color-theme);
+        border: none;
+    }

@@ -58,7 +58,7 @@ html, body {
     border: none;
     width: 100%;
     font-size: var(--font-size-14);
-    padding: 10px 15px;
+    padding: 10px 15px; 
 }
     .categories-menu button:hover {
         background-color: var(--color-theme-navy);
@@ -73,11 +73,21 @@ html, body {
                     color: var(--color-white);
                     background-color: var(--color-theme-navy);
                 }
-.btn-turquoise {
-    background-color: var(--color-theme-light);
-    color: var(--color-theme-navy);
-    padding: 20px;
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-theme);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--border-radius-medium); 
+    border-radius: 50px;
+    border: none;
+    padding: 8px 18px;
 }
+    .btn-secondary:hover {
+        background-color: var(--color-theme-navy);
+        color: var(--color-white);
+        border: none;
+    }
 
 
 /*menu*/
@@ -229,71 +239,78 @@ html, body {
 
 /*main-photo-slideshow*/
 
-.main-slideshow {
+.showcase {
     background-color: var(--color-gray-2);
     color: var(--color-theme-navy);
 }
-    .main-slideshow .container {
+    .showcase .container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .main-slideshow .shopping-title {
+    .showcase .showcase-body {
         display:none;
-        flex: 3;
+        flex: 1;
     }
-        .main-slideshow .shopping-title .box {
-            width: 400px;
-
-        }
-        .main-slideshow .shopping-title #title-top {
+        .showcase .showcase-body h1 {
             font-family: var(--font-play);
-            font-size: 60px;
+            font-size: var(--font-size-60);
         }
-        .main-slideshow .shopping-title #title-bottom {
+        .showcase .showcase-body strong {
             color: var(--color-theme);
-            font-family: var(--font-play);
-            font-size: 60px;
-            font-weight: var(--font-weight-bold);
         }
 
-        .main-slideshow .shopping-title button {
+        .showcase .showcase-body button {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--color-white);
-            color: var(--color-theme);
-            border-radius: 50px;
-            padding: 8px 18px;
         }
-            .main-slideshow .shopping-title button:hover {
-                background-color: var(--color-theme-navy);
-                color: var(--color-white);
-            }
     
-        .main-slideshow .slideshow {
-            flex: 3;
+        .showcase .slideshow {
+            flex: 1;
         }
 
-/*cards*/
-.card-links {
+/*webshop-info*/
+.webshop-info {
     background-color: var(--color-white);
     color: var(--color-theme-navy);
+    padding: 60px 0px;
 }
-    .card-links .container {
+    .webshop-info .container {
+        max-width: 1600px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 75px 0px;
+        justify-content: space-evenly;
+
     }
-        .card-links .free-shipping {         
+        .webshop-info .info-box {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            margin: 0px 20px;
+            padding: 25px 20px 15px 15px;
+            background-color: var(--color-theme-light);
+            border-radius: 8px;
         }
-        .card-links .support {       
-        }
-        .card-links .online-payment {    
-        }
-        .card-links .fast-delivery {   
-        }
+            .webshop-info .info-box:hover {
+                background-color: var(--color-theme);
+                color: var(--color-white);
+            }
+            .webshop-info .info-box img {
+                margin-right: 20px;
+                margin-left: 10px;
+            } 
+                .webshop-info .info-box:hover img {
+                    filter: brightness(2000%);
+                }
+            .webshop-info .info-box h5 {
+                color: var(--color-theme);
+                font-size: var(--font-size-14);
+                font-weight: var(--font-weight-medium);
+            }
+                .webshop-info .info-box:hover h5 {
+                    color: var(--color-white);
+                }
+
 
 
 
@@ -328,12 +345,14 @@ html, body {
         display: flex;
         flex: 3;
     }
-
+    .info-menu .categories-menu > .dropdown-menu .my-account {
+        display: none;
+    }
 }
 
 @media (min-width: 780px) {
-    .main-slideshow .shopping-title {
-        display: inline;
+    .showcase .showcase-body {
+        display: block;
     }
 }
 
