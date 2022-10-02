@@ -4,12 +4,14 @@
     --color-theme: #20D3C2;
     --color-theme-light: #EDFBFA;
     --color-theme-navy: #0E153D;
+    --color-east-bay: #515670;
     --color-dark: #080c24;
     --color-white: #FFFFFF;
     --color-gray-0: #AAAAAA;
     --color-gray-1: #CCCCCC;
     --color-gray-2: #EEEEEE;
     --color-gray-3: #F6F6F6;
+    --color-gray-4: #777777;
     --color-product-instock:#82D8C6;
     --color-product-outofstock: #FE6C6C;
 
@@ -60,6 +62,25 @@ html, body {
         background-color: var(--color-theme-dark);
     }
 
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-theme);
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    border-radius: var(--border-radius-medium); 
+    border-radius: 50px;
+    border: none;
+    padding: 8px 18px;
+}
+    .btn-secondary:hover {
+        background-color: var(--color-theme-navy);
+        color: var(--color-white);
+        border: none;
+    }
+    .btn-secondary:focus {
+        background-color: var(--color-dark);
+    }
+
 .categories-menu button {
     background-color: var(--color-theme);
     color: var(--color-white);
@@ -90,24 +111,42 @@ html, body {
                     background-color: var(--color-dark);
                 }
 
-.btn-secondary {
-    background-color: var(--color-white);
-    color: var(--color-theme);
-    font-weight: var(--font-weight-medium);
-    font-size: 16px;
-    border-radius: var(--border-radius-medium); 
-    border-radius: 50px;
-    border: none;
-    padding: 8px 18px;
+.instock {
+    color: var(--color-product-instock);
+    }
+.outofstock {
+    color: var(--color-product-outofstock);
 }
-    .btn-secondary:hover {
-        background-color: var(--color-theme-navy);
-        color: var(--color-white);
-        border: none;
+
+.form-theme .card .card-body {
+    font-family: var(--font-roboto);
+    color: var(--color-theme-navy);
+}
+    .form-theme .card .card-body h1 {
+        font-size: var(--font-size-18);
+        font-weight: var(--font-weight-medium);
+
     }
-    .btn-secondary:focus {
-        background-color: var(--color-dark);
+    .form-theme .card .card-body .card-text {
+        line-height: 2;
     }
+    .form-theme .card .card-body .text-small {
+        color: var(--color-gray-4);
+        font-size: 14px;
+    }
+    .form-theme .card .card-body .card-text a {
+        color: var(--color-theme);
+        text-decoration: none;
+    }
+    .form-theme .card .card-body .card-text a:hover {
+        color: var(--color-theme-navy);
+        text-decoration: underline;
+    }
+.required {
+    color: var(--color-theme);
+    padding: 3px;
+}
+    
 
 .section-title {
     color: var(--color-theme-navy);
@@ -126,93 +165,93 @@ html, body {
         margin: 13px 0px;
     }
 
-.row {
-    align-items: center;
-} 
-    .card {
+    .card-theme {
         position: relative;
         overflow: hidden;
         background-color: var(--color-theme-navy);
         border: none;
-        width: 370px;
+        border-radius: 8px;
+        width: 400px;
     }
 
-        .card .card-menu {
-            position:absolute;
-            z-index: 1;
-            top: 20px;
-            left: 110%;
-            list-style: none;
-            margin: auto;
-            padding: 10px;
-            border-radius: 25px;
-            font-size: var(--font-size-16);
-            background-color: var(--color-white);
-            transition: left 0.3s ease-in-out;
-            transition-delay: left 0.2s;
-        }  
-        .card:hover .card-menu {
-            left: 80%;
+    .card-theme .card .card-menu {
+        position:absolute;
+        z-index: 1;
+        top: 20px;
+        left: 110%;
+        list-style: none;
+        margin: auto;
+        padding: 10px;
+        border-radius: 25px;
+        font-size: var(--font-size-16);
+        background-color: var(--color-white);
+        transition: left 0.3s ease-in-out;
+        transition-delay: left 0.2s;
+    }  
+    .card-theme .card:hover .card-menu {
+        left: 85%;
+    }
+    .card-theme .card .card-menu li a {
+            color: var(--color-gray-0);
+            transition: color 0.2s;
         }
-            .card .card-menu li a {
-                color: var(--color-gray-0);
-                transition: color 0.2s;
+        .card-theme .card .card-menu li a:hover {
+            color: var(--color-theme);
+        }  
+        .card-theme .card .card-menu li a:focus {
+            color: var(--color-theme-light);
+        }
+        .card-theme .card .card-body  {
+            position: absolute;
+            bottom: -21%;
+            width: 100%;
+            z-index: 1;
+            color: var(--color-white);
+            transition: all 0.3s;
+        }
+        .card-theme .card .card-body button {
+                background-color: transparent;
+                border: 1px solid var(--color-white);
+                color: var(--color-white);
+                font-size: 12px;
+                margin-top: 20px;
+                margin-bottom: 8px;
+                transition: all 0.3s;
             }
-    
-            .card .card-menu li a:hover {
+            .card-theme .card .card-body h1 {
+                font-size: var(--font-size-14);
+            }
+            .card-theme .card .card-body .card-discount-price {
+                color: var(--color-theme);
+                font-size: 18px;
+                font-weight: var(--font-weight-medium);
+                margin: 0;
+            }
+            .card-theme .card .card-body i {
                 color: var(--color-theme);
             }
-    
-            .card .card-menu li a:focus {
-                color: var(--color-theme-light);
-            }
-
-            .card .card-body {
-                position: absolute;
-                bottom: -30%;
-                z-index: 1;
-                color: var(--color-white);
-                transition: bottom 0.3s;
-            }
-                .card .card-body button {
-                    background-color: var(--color-theme-navy);
-                    border: 1px solid var(--color-white);
-                    color: var(--color-white);
-                    font-size: 12px;
-                    margin-bottom: 8px;
-                }
-                .card .card-body h1 {
-                    font-size: var(--font-size-14);
-                    padding: 20px 5px;
-                }
-                .card .card-body .card-discount-price {
-                    color: var(--color-theme);
-                }
-
-
-            .card:hover .card-body {
-                bottom: 0%;
-
-            }
-            .card .card-background {
-                position: absolute;
-                bottom: 0;
-                height: 12%;
-                width: 100%;
-                background-color: var(--color-theme-navy);
-                opacity: 0.90;
-                transition: height 0.3s ease-in-out;
-            }
-            .card:hover .card-background {
-                height: 100%;
-            }
-.instock {
-    color: var(--color-product-instock);
-    }
-.outofstock {
-    color: var(--color-product-outofstock);
-}
-
+            .card-theme .card .card-body .card-normal-price {
+                text-decoration: line-through;
+                margin: 0;
+            } 
+            .card-theme .card:hover .card-body {
+            bottom: 0%;
+        }
+        .card-theme .card:hover .card-body button {
+            margin-top: 0px;
+        }
+        .card-theme .card .card-background {
+            position: absolute;
+            bottom: 0;
+            height: 12%;
+            width: 100%;
+            background-color: var(--color-theme-navy);
+            opacity: 0.90;
+            transition: height 0.3s ease-in-out;
+        }
+        .card-theme .card:hover .card-background {
+            height: 100%;
+        }
 /*menu*/
 .info-menu {
     background-color: var(--color-theme);
@@ -348,7 +387,6 @@ html, body {
 
     .main-menu nav {
         border-top: 1px solid var(--color-gray-2);
-        border-bottom: 1px solid var(--color-gray-2);
     }
         .main-menu > nav > .container {
             display: flex;
@@ -528,8 +566,6 @@ padding-bottom: 10px;
         padding-bottom: 40px;
     }
 
-   
-    
 
 
     /*BANNER*/
@@ -638,11 +674,144 @@ padding-bottom: 10px;
                     background-color: var(--color-dark);
                 }
 
+    .site-title {
+        background-color: var(--color-east-bay);
+        color: var(--color-white);
+        padding: 40px;
+    }
+        .site-title .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-title h1 {
+            color: var(--color-theme);
+            font-family: var(--font-roboto);
+            font-size: var(--font-size-18);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+        }
+    
+        .site-title nav ol {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+            .site-title .breadcrumb a {
+                color: var(--color-theme);
+                margin-bottom: 30px;
+            }
+
+    .signup-signin {
+        padding: 70px 0px;
+    }
+        .signup-signin .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
+            column-gap: 30px;
+        }
+        .form-theme .card {
+            border: none;
+            background-color: var(--color-gray-3);
+            padding: 20px;
+        }
+        
+
+    .form-theme form input[type=text], [type=email], [type=password] {
+        display: block;  
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 10px;
+        margin: 5px 0px;
+    }
+        .form-theme form input:focus {
+            outline: 0;
+            box-shadow: 0 0 2px 0 var(--color-gray-4);
+        }    
+
+    .form-theme form input[type=checkbox] {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+    }
+
+    #signinForm .mb-4 a {
+        color: var(--color-theme);
+        text-decoration: none;
+    }
+    #signinForm .mb-4 a:hover {
+        color: var(--color-theme-navy);
+        text-decoration: underline;
+    }
+
+    .signup-signin .card .external-logins {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup-signin .card .external-logins #external-logins-title {
+        z-index: 1;
+        background-color: var(--color-gray-3);
+        padding: 0px 30px;
+    }
+
+    .signup-signin .card .external-logins .line {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        border: 1px solid var(--color-gray-2);
+        z-index: 0;
+    }
+
+    .external-login-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fb {
+        background-color: #3B5998;
+        color: white;
+        padding: 5px 20px 5px 15px;
+        margin: 0;
+    }
+    .fb i {
+        padding-right: 40px;
+    }
+      .google {
+        background-color: #dd4b39;
+        color: white;
+        padding: 5px 20px 5px 15px;
+        margin: 0;
+      }
+      .google i {
+        padding-right: 40px;
+      }
+    
+    .external-login-buttons .btn:hover {
+        background-color: var(--color-theme-navy);
+        color: white;
+    }
+    .external-login-buttons .btn:focus {
+        background-color: var(--color-dark);
+        color: var(--color-theme-light);
+    }
 
 
 
 
 
+    /*#login-box {
+        grid-row: 1/3;
+    }
+    #register-box {
+        grid-row: 1/-1;
+    }*/
 
        /* LOAD SPINNER
        
